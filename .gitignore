@@ -1,0 +1,9 @@
+# binaries
+server
+website
+
+# posts
+posts/*
+
+# released posts
+!posts/intro.md
