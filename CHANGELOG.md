@@ -1,3 +1,7 @@
+0.0.2
+-----
+- Established basic theme in CSS
+
 0.0.1
 -----
 - Initial webserver in Go
