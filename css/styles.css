@@ -10,7 +10,7 @@ Just making note of these dope colors (HSL):
 @media (max-width: 8.5in) { :root { font-size: 18px; } }
 @media (max-width: 5.0in) { :root { font-size: 16px; } }
 
-header { padding-top: 2rem; padding-bottom: 2rem; }
+#header-wrapper { padding-top: 2rem; padding-bottom: 2rem; }
 h1, .h1-stamped   { font: 700 2.0rem/1.2 …; color: hsl(000, 000%, 33%); }
 h2   { font: 400 1.5rem/1.2 …; color: hsl(000, 000%, 33%) }
 time { font: 700 1.0rem/1.2 …; color: hsl(000, 000%, 33%); }
@@ -36,19 +36,97 @@ h1, h2, h3 {
   padding-bottom: 0.5rem;
 }
 
-header, article {
+.header-container {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.content-container {
+  width: 100%;
+}
+
+.footer-container {
+  width: 100%;
+}
+
+.header-grid * {
+  grid-area: header;
+  align-self: center;
+}
+
+.content-grid * {
+  grid-area: content;
+  background-color: white;
+  z-index: 2;
+}
+
+.footer-grid * {
+  grid-area: footer;
+}
+
+.header-grid {
   display: grid;
-  grid-template-columns: [left] 1fr [content-left] 8.5in [content-right] 1fr [right];
+  grid-template-areas: 
+    ". header .";
+  grid-template-rows: [header-top] 8rem [header-bottom];
+  grid-template-columns: [left] 1fr [center-left] 8.5in [center-right] 1fr [right];
+}
+
+.content-grid {
+  display: grid;
+  grid-template-areas: 
+    ". . ."
+    ". content ."
+    ". . .";
+  grid-template-rows: [top] 8rem [content-top] auto [footer-top] 8rem [bottom];
+  grid-template-columns: [left] 1fr [center-left] 8.5in [center-right] 1fr [right];
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-areas:
+    ". footer .";
+  grid-template-rows: [footer-top] 8rem [footer-bottom];
+  grid-template-columns: [left] 1fr [center-left] 8.5in [center-right] 1fr [right];
 }
 
 @media (max-width: 8.5in) {
-  header, article {
-      grid-template-columns: 1fr 5% [content-left] 90% [content-right] 5% 1fr;
+  .header-grid, .content-grid, .footer-grid {
+      grid-template-columns: [left] 1fr 5% [center-left] 90% [center-right] 5% 1fr [right];
+  }
+
+  .header-grid {
+    grid-template-areas: 
+      ". header .";
+    grid-template-rows: [header-top] 8rem [header-bottom];
+  }
+
+  .content-grid {
+    grid-template-areas: 
+      ". . ."
+      ". content ."
+      ". footer .";
+    grid-template-rows: [top] 8rem [content-top] auto [footer-top] 8rem [bottom];
+  }
+
+  .footer-grid {
+    grid-template-areas:
+      ". footer .";
+    grid-template-rows: [footer-top] 8rem [footer-bottom];
   }
 }
 
-header *, article * {
-  grid-column: content-left / content-right;
+.header-grid * {
+  grid-row: header-top / header-bottom;
+}
+
+.header-grid *, .content-grid *, .footer-grid * {
+  grid-column: center-left / center-right;
+}
+
+.footer-grid * {
+  grid-row: footer-top / footer-bottom;
 }
 
 /* div for timestamped article header */

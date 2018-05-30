@@ -9,6 +9,8 @@
   <meta name="description" content="Log of my DevOps journey">
   <meta name="author" content="Collin Brittain">
 
+  <link rel="stylesheet" href="css/reset.css?v=1.0">
+  <link rel="stylesheet" href="css/-debug.css?v=1.0">
   <link rel="stylesheet" href="css/styles.css?v=1.0">
 
   <!--[if lt IE 9]>
@@ -17,20 +19,50 @@
 </head>
 
 <body>
-  <div id="wrapper">
-    <header>
-      <h1>DevOps Noob</h1>
-    </header>
-    <div id="content">
-      <!--script src="js/scripts.js"></script>-->
-      Initial body. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-      occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <base target="_blank"/>
+  <div class="header-container">
+    <div class="header-grid">
+      <header>
+        <h1>Collin Brittain</h1>
+        <h2>devops noob</h2>
+      </header>
     </div>
-    <footer>
+  </div>
+  <div class="content-container">
+    <div class="content-grid">
+      <article id="hi">
+        <div class="h1-stamped">
+          <h1>Hi.</h1>
+          <time datetime="03-09-2014">May 2, 2018</time>
+        </div>
+        <p>
+          I'm Collin. I'm a guy in his twenties who recently (less than a year ago) and accidentally started to pursue a career in DevOps engineering. Two years ago I didn't know what DevOps was. When I started at my first job after college, I was given <a class="reference" href="https://www.goodreads.com/book/show/17255186-the-phoenix-project">The Pheonix Project</a> as required reading, a novelized presentation of how to apply the Three Ways. From it I learned to identify and improve inefficiencies in IT organizations that I had never dealt with because, you know, I had just graduated. Nonetheless, it allowed me to enter the field of IT with some idea of what things <i>should</i> be like, which is invaluable if you want to make positive change in any field.
+        </p>
+        <p>
+          I shouldn't be deploying one-hundred VMs manually. I shouldn't be installing and patching this operating sytem on these baremetal servers manually. I shouldn't be configuring the networking, firewall, storage, permissions, etc. on said servers... manually. These kinds of thoughts were frequently crossing my mind a few months into my role in Operations. But everybody can identify problems; I decided I wanted to try and create solutions. So, I started learning about <i>automation!</i>
+        </p>
+        <p>
+          To be clear, <b>automation is not DevOps</b>, but it is certainly an important tool for the application of it. I had a foundational knowledge of scripting from college, so I was able to pick up PowerShell pretty quickly, which at the time of writing this continues to be my primary scripting language (sometimes a pain since I use a Mac,) though I am working on shell scripting in bash as well. Later I began learning Chef and all of its associated tools (not Chef Automate), which introduced me to concepts like idempotency, declarative configuration, infrastructure as code, and enough familiarity with Ruby to be dangerous.
+        </p>
 
-    </footer>
+        <h3>I am learning every day</h3>
+        <p>
+          <a href="/Users/cbrit/Pictures/Japan/IMG_1854.jpg">testing out a link</a> but really have nothing to show for it pubically since all of my work is behind my company's private network. I've decided to start a personal project that will allow me to show what I've learned in the last year and give me an opportunity to grow particularly in the areas of contuous integration/deployment,containerization with Docker, security, web development, and networking. Most importantly, I want to apply proven methodoligies such as test driven development and continuous integration and deployment.
+        </p>
+
+        <h3>cbrittain.com</h3>
+        <p>
+          This website is the project. I'll be posting updates as I go about the changes I make and what I learn. To start, I want to create a basic web page that shows this introductory blurb, serve it with Go (just because), containerize it with Docker, and host it in AWS at cbrittain.com. Here goes nothin'.
+        </p>
+      </article>
+    </div>
+  </div>
+  <div class="footer-container">
+    <div class= "footer-grid">
+      <footer>
+        
+      </footer>
+    </div>
   </div>
 </body>
 
