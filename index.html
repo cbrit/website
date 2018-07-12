@@ -36,23 +36,37 @@
           <time datetime="03-09-2014">May 2, 2018</time>
         </div>
         <p>
-          I'm Collin. I'm a guy in his twenties who recently (less than a year ago) and accidentally started to pursue a career in DevOps engineering. Two years ago I didn't know what DevOps was. When I started at my first job after college, I was given <a class="reference" href="https://www.goodreads.com/book/show/17255186-the-phoenix-project">The Pheonix Project</a> as required reading, a novelized presentation of how to apply the Three Ways. From it I learned to identify and improve inefficiencies in IT organizations that I had never dealt with because, you know, I had just graduated. Nonetheless, it allowed me to enter the field of IT with some idea of what things <i>should</i> be like, which is invaluable if you want to make positive change in any field.
-        </p>
-        <p>
-          I shouldn't be deploying one-hundred VMs manually. I shouldn't be installing and patching this operating sytem on these baremetal servers manually. I shouldn't be configuring the networking, firewall, storage, permissions, etc. on said servers... manually. These kinds of thoughts were frequently crossing my mind a few months into my role in Operations. But everybody can identify problems; I decided I wanted to try and create solutions. So, I started learning about <i>automation!</i>
-        </p>
-        <p>
-          To be clear, <b>automation is not DevOps</b>, but it is certainly an important tool for the application of it. I had a foundational knowledge of scripting from college, so I was able to pick up PowerShell pretty quickly, which at the time of writing this continues to be my primary scripting language (sometimes a pain since I use a Mac,) though I am working on shell scripting in bash as well. Later I began learning Chef and all of its associated tools (not Chef Automate), which introduced me to concepts like idempotency, declarative configuration, infrastructure as code, and enough familiarity with Ruby to be dangerous.
+          I'm Collin. A guy who recently, and accidentally, took an interest in DevOps engineering. I've found is that I get a lot of information from other engineers who share their knowledge on their own blogs. I figured it's a great way to showcase myself but also give back by sharing my own experiences. It also gives me avenues for learning tools and technologies that I don't use at work. As I develop this site I'll be posting about the technologies I'm using, the concepts I apply, and the skills I gain along the way.
         </p>
 
-        <h3>I am learning every day</h3>
+        <h2>Architecture</h2>
         <p>
-          <a href="/Users/cbrit/Pictures/Japan/IMG_1854.jpg">testing out a link</a> but really have nothing to show for it pubically since all of my work is behind my company's private network. I've decided to start a personal project that will allow me to show what I've learned in the last year and give me an opportunity to grow particularly in the areas of contuous integration/deployment,containerization with Docker, security, web development, and networking. Most importantly, I want to apply proven methodoligies such as test driven development and continuous integration and deployment.
-        </p>
+          There are three things in particular I am itching to use more, and those are Go, Docker, and AWS. So, the basic serving is done with Go, which may be overkill but I'll think of other ways to use it in the future. It has a built-in http library <code>net/http</code> that makes things very straight forward:
+          <pre><code>
+  package main
 
-        <h3>cbrittain.com</h3>
+  import (
+    "net/http"
+  )
+
+  func handleRoot(w http.ResponseWriter, r *http.Request) {
+    http.ServeFile(w, r, "./index.html")
+  }
+
+  func main() {
+    http.HandleFunc("/", handleRoot)
+    http.ListenAndServe(":80", nil)
+  }
+          </code></pre>
+        </p>
         <p>
-          This website is the project. I'll be posting updates as I go about the changes I make and what I learn. To start, I want to create a basic web page that shows this introductory blurb, serve it with Go (just because), containerize it with Docker, and host it in AWS at cbrittain.com. Here goes nothin'.
+          The plan is to host this site in a Docker container in AWS by either using the <a href="https://aws.amazon.com/ecs/">Elastic Container Service</a> and other necessary network-related services.
+        </p>
+        <p>
+          My HTML/CSS skills are limited but I'm implementing CSS Grid for the layout. I think the hardest part will be making things friendly for all screen sizes. I have a basic set of media queries that do some resizing based on window size that should get me by for now:
+        </p>
+        <p>
+          That's all for now!
         </p>
       </article>
     </div>
