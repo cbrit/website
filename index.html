@@ -32,17 +32,17 @@
     <div class="content-grid">
       <article id="hi">
         <div class="h1-stamped">
-          <h1>Hi.</h1>
+          <h2>Hi.</h2>
           <time datetime="03-09-2014">May 2, 2018</time>
         </div>
         <p>
           I'm Collin. A guy who recently, and accidentally, took an interest in DevOps engineering. I've found is that I get a lot of information from other engineers who share their knowledge on their own blogs. I figured it's a great way to showcase myself but also give back by sharing my own experiences. It also gives me avenues for learning tools and technologies that I don't use at work. As I develop this site I'll be posting about the technologies I'm using, the concepts I apply, and the skills I gain along the way.
         </p>
 
-        <h2>Architecture</h2>
+        <h3>Architecture</h3>
         <p>
           There are three things in particular I am itching to use more, and those are Go, Docker, and AWS. So, the basic serving is done with Go, which may be overkill but I'll think of other ways to use it in the future. It has a built-in http library <code>net/http</code> that makes things very straight forward:
-          <pre><code>
+          <pre>
   package main
 
   import (
@@ -57,7 +57,7 @@
     http.HandleFunc("/", handleRoot)
     http.ListenAndServe(":80", nil)
   }
-          </code></pre>
+          </pre>
         </p>
         <p>
           The plan is to host this site in a Docker container in AWS by either using the <a href="https://aws.amazon.com/ecs/">Elastic Container Service</a> and other necessary network-related services.

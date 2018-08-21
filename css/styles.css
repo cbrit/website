@@ -8,49 +8,13 @@ Just making note of these dope colors (HSL):
 */
 
 :root {
-  font-size: 10px;
-  --h1-ratio: 4;
-  --h2-ratio: 3;
-  --h3-ratio: 2.5;
+  font-size: 22px;
 }
-
-@media (max-width: 20in) {
-  :root .content-container * {
-    --font-size-px: 22px;
-    --font-size-rem: 2.2rem;
-    font-size: var(--font-size-px);
-    font-size: var(--font-size-rem);
-  }
-}
-
-@media (max-width: 10in) {
-  :root .content-container * {
-    --font-size-px: 20px;
-    --font-size-rem: 2.0rem;
-    font-size: var(--font-size-px);
-    font-size: var(--font-size-rem);
-  }
-}
-
-@media (max-width: 5.0in) {
-  :root .content-container * {
-    --font-size-px: 18px;
-    --font-size-rem: 1.8rem;
-    font-size: var(--font-size-px);
-    font-size: var(--font-size-rem);
-  }
-}
-
-.content-container code {
-  font-size: calc(0.84 * var(--font-size-px));
-  font-size: calc(0.84 * var(--font-size-rem));
-}
-
 
 #header-wrapper { padding-top: 2rem; padding-bottom: 2rem; }
-h1   { font: 700 4.0rem/1.2 …; color: hsl(000, 000%, 33%); }
+h1   { font: 700 3.0rem/1.2 …; color: hsl(000, 000%, 33%); }
 h2   { font: 400 2.0rem/1.2 …; color: hsl(000, 000%, 33%); }
-time { font: 700 1.0rem/1.2 …; color: hsl(000, 000%, 33%); }
+time { font: 400 1.0rem/1.2 …; color: hsl(000, 000%, 33%); }
 h3   { font: 700 1.0rem/1.2 …; color: hsl(000, 000%, 33%); }
 a    { box-shadow: inset 0 -0.25em #3DFFAB;  }
 a:hover { color: #3DFFAB; }
@@ -64,13 +28,18 @@ p    {
   font-family: garamond; /*Georgia,Cambria,"Times New Roman",Times,serif;*/
   /* font-size: 24px; */
 }
+pre {
+  font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+  font-size: calc(0.75 * 1rem);
+  padding: 1rem 1rem 0.5rem 0.5rem;
+}
 
 h1, h2, h3, time {
   font-family: helveticaneue;
   color: hsl(000, 000%, 33%);
 }
 
-h1, h2, h3 {
+h2, h3 {
   padding-bottom: 0.5rem;
 }
 
@@ -98,7 +67,7 @@ h1, h2, h3 {
   background-color: white;
 }
 
-.content-grid pre, .content-grid pre code {
+.content-grid pre {
   background-color: #EDEDED;
 }
 
