@@ -1,3 +1,9 @@
+0.0.3
+-----
+- Starting clean with a better understanding of grid
+- Generalized the content (lorem ipsum type stuff)
+- Removed media queries for now
+
 0.0.2
 -----
 - Established basic theme in CSS

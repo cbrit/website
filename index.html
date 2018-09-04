@@ -19,64 +19,28 @@
 </head>
 
 <body>
-  <base target="_blank"/>
-  <div class="header-container">
-    <div class="header-grid">
-      <header>
-        <h1>Collin Brittain</h1>
-        <h2>devops noob</h2>
-      </header>
-    </div>
+  <base target="_blank" />
+
+  <div class="back-wrapper">
+    <header>
+      <h1>Title Here</h1>
+      <h2>subtitle goes here</h2>
+    </header>
   </div>
-  <div class="content-container">
-    <div class="content-grid">
-      <article id="hi">
-        <div class="h1-stamped">
-          <h2>Hi.</h2>
-          <time datetime="03-09-2014">May 2, 2018</time>
-        </div>
-        <p>
-          I'm Collin. A guy who recently, and accidentally, took an interest in DevOps engineering. I've found is that I get a lot of information from other engineers who share their knowledge on their own blogs. I figured it's a great way to showcase myself but also give back by sharing my own experiences. It also gives me avenues for learning tools and technologies that I don't use at work. As I develop this site I'll be posting about the technologies I'm using, the concepts I apply, and the skills I gain along the way.
-        </p>
 
-        <h3>Architecture</h3>
+  <div class="front-wrapper">
+    <div class="content">
         <p>
-          There are three things in particular I am itching to use more, and those are Go, Docker, and AWS. So, the basic serving is done with Go, which may be overkill but I'll think of other ways to use it in the future. It has a built-in http library <code>net/http</code> that makes things very straight forward:
-          <pre>
-  package main
-
-  import (
-    "net/http"
-  )
-
-  func handleRoot(w http.ResponseWriter, r *http.Request) {
-    http.ServeFile(w, r, "./index.html")
-  }
-
-  func main() {
-    http.HandleFunc("/", handleRoot)
-    http.ListenAndServe(":80", nil)
-  }
-          </pre>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quae nesciunt eum assumenda sint esse maxime voluptatum, reiciendis labore itaque suscipit adipisci quaerat veniam amet ipsam blanditiis necessitatibus fugiat animi magni cumque consequatur, ipsum voluptatibus. Et quisquam fuga eos velit, ullam in facilis blanditiis ad labore qui. Quasi, id harum beatae perspiciatis officia rerum omnis soluta repellendus reprehenderit hic porro temporibus consequatur, laudantium doloremque! Illum laboriosam unde expedita ut maiores doloribus laborum iusto ea cum nesciunt a quibusdam est quae blanditiis, velit obcaecati quasi inventore soluta natus distinctio quam. Dignissimos explicabo, incidunt reiciendis assumenda eum aliquid, odio doloribus totam nihil, iure esse nemo quidem iusto molestias autem unde natus quaerat voluptas neque eligendi eius voluptatum optio. Repellat blanditiis laboriosam corporis ut maiores, deserunt aliquid, possimus quam magni suscipit expedita amet aliquam ducimus quod aut praesentium consequuntur quasi deleniti? Nihil odit quod libero itaque, molestias dignissimos consequatur velit at adipisci minus soluta veritatis distinctio quis aperiam modi porro id! Possimus perspiciatis dolorum cumque cupiditate incidunt veritatis, illo recusandae placeat est tenetur adipisci eaque corporis animi nulla quos aspernatur odit a libero.
         </p>
+          
         <p>
-          The plan is to host this site in a Docker container in AWS by either using the <a href="https://aws.amazon.com/ecs/">Elastic Container Service</a> and other necessary network-related services.
+          Officiis, culpa dolor quisquam ipsam numquam molestiae nisi quam voluptates pariatur non distinctio iusto perferendis unde architecto quae sit quia laborum ab voluptatibus sapiente aliquid ipsa corrupti nesciunt dolorem? Voluptatum totam minima a velit debitis rem maxime facilis? Libero, itaque delectus architecto perspiciatis blanditiis placeat beatae voluptas nobis laboriosam. Minima, quam eos vel aperiam atque corporis suscipit, optio nesciunt eum impedit quidem, pariatur quo sit molestiae perferendis dicta assumenda ab saepe alias laudantium deserunt earum voluptatem reprehenderit. Suscipit eveniet voluptates eaque cupiditate, voluptate minus consequatur ab distinctio amet, assumenda praesentium. Tenetur quas hic ipsam. Assumenda, officiis dolor. Praesentium quam nostrum recusandae. Fuga ex quaerat, voluptatem, nam commodi cupiditate eveniet assumenda excepturi soluta in iure saepe recusandae modi? Aut suscipit quos enim numquam, rem atque explicabo similique, quibusdam repellat ex quod. Corporis assumenda, earum obcaecati impedit, nihil praesentium veritatis quaerat officiis voluptate iure excepturi hic incidunt eligendi ad tenetur est dignissimos cum natus! Ratione dicta mollitia sit temporibus! Accusamus saepe qui, laudantium hic eos quisquam aliquam? Expedita nesciunt blanditiis reiciendis dolores nisi praesentium earum dignissimos error voluptatibus? Distinctio maiores, ad, harum odit veniam, expedita optio excepturi aut eum magnam consectetur natus porro adipisci sunt accusamus. Reprehenderit debitis esse aspernatur perspiciatis placeat alias quae id, eveniet suscipit quaerat animi unde magni quos a eaque eius consequuntur! Delectus ullam recusandae, adipisci dolor reprehenderit repellendus neque modi nobis eos? Sint atque reprehenderit quod, laboriosam facilis nemo voluptas modi, sed, sapiente culpa dolores magnam aut reiciendis quis praesentium deserunt? Provident culpa ad aspernatur adipisci necessitatibus fuga dicta enim, corrupti tempora temporibus alias, doloremque quis ex molestiae nulla amet impedit. Hic iusto quae nobis modi veritatis in pariatur dolores sed aut voluptates impedit reiciendis, laboriosam amet unde consectetur tempore numquam corporis nisi! Nesciunt, consequatur. Quibusdam voluptatem sunt dolores eius corrupti commodi, quas ex sit ut? Odit amet quod dolore ad magni? Ab similique labore molestias eveniet expedita vero odit at maxime velit quod assumenda, libero sunt.
         </p>
-        <p>
-          My HTML/CSS skills are limited but I'm implementing CSS Grid for the layout. I think the hardest part will be making things friendly for all screen sizes. I have a basic set of media queries that do some resizing based on window size that should get me by for now:
-        </p>
-        <p>
-          That's all for now!
-        </p>
-      </article>
     </div>
-  </div>
-  <div class="footer-container">
-    <div class= "footer-grid">
-      <footer>
-        
-      </footer>
-    </div>
+
+    <footer>
+    </footer>
   </div>
 </body>
 
