@@ -12,7 +12,7 @@ Just making note of these dope colors (HSL):
      color: hsl(000, 000%, 33%);
 }
 
-h1   { font: 400 3.0rem/1.2 …; }
+h1   { font: 400 2.0rem/1.2 …; }
 h2   { font: italic 300 1.5rem/1.2 …; }
 time { font: 400 1.0rem/1.2 …; }
 h3   { font: 400 1.0rem/1.2 …; }
@@ -53,8 +53,9 @@ h2, h3 {
 }
 
 .back-wrapper header {
-     padding-top: 1em;
+     padding-top: 1.5em;
      grid-column: 2/3;
+     align-content: center;
 }
 
 .front-wrapper {
@@ -65,10 +66,14 @@ h2, h3 {
 .front-wrapper .content {
      grid-column: 2/3;
      grid-row-start: 2;
-     border-top: 4px solid;
-     border-color: #3DFFAB;
-     padding-top: 0.5rem;
+     /* border-top: 2px solid;
+     border-color: #3DFFAB; */
      background-color: white;
+}
+
+.front-wrapper .content img {
+     width: 100%;
+     margin-bottom: 0.5em;
 }
 
 .front-wrapper footer {

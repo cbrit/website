@@ -1,3 +1,10 @@
+0.0.4
+-----
+- Added image to content
+- URL example in content
+- Removed top border, didn't mesh with image
+- Shrunk h1 a by 1rem
+
 0.0.3
 -----
 - Starting clean with a better understanding of grid
